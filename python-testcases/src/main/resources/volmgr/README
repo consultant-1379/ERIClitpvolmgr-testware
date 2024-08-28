@@ -1,0 +1,1469 @@
+OBSOLETED TC
+============
+
+
+Story 43
+--------
+
+test_[01-22]
+    OBSOLETED, moved to AT:
+        volmgr/testset_story43
+
+    git: 718847e8154aef17c8d4d8128a784977d69d5e36, 56533af9b59bc99068f3889c8312426f9a0ee375
+    gerrit: https://gerrit.ericsson.se/#/c/1114999/, https://gerrit.ericsson.se/#/c/1329603/
+
+Story 2059
+----------
+MOVED to AT:
+    ERIClitpvolmgr/ats/testset_story2059
+
+git: 3af4534edc2843824920a1c177936a7d4da37a04
+
+Story 2067
+----------
+
+test_03_p_increase_size_all_nodes_MB
+    Removed, contained in test_01 and test_05
+    Description:
+        Increase(in MB) the size of a file system on all nodes
+
+    git: b0db5c3c6d28ee8bf60fa64bb53904ec5f3d4634
+    gerrit: https://gerrit.ericsson.se/#/c/1309409
+
+test_08_n_update_size_type_swap
+    MOVED to ATs volmgr
+    testset_story2067/test_08_n_update_size_type_swap.at
+    Description:
+        Update the size of a file-system of type 'swap'
+        (size increase is less than the space available on the disk)
+
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_09_n_decrease_fs_size
+    ALREADY in ATs:
+    ERIClitpvolmgr/ats/LITPCDS-9114-validation.at
+    ERIClitpvolmgr/ats/no_model_validation_on_plan.at
+
+    git: 59568aed0f8efb9cb26da6aa45e8a7b2de13f378
+    gerrit: https://gerrit.ericsson.se/#/c/1224236/
+
+test_10_n_update_size_to_zero_GB
+    MOVED to ATs volmgr
+    testset_story2067/test_10_n_update_size_to_zero_GB
+
+        Description:
+            Set the size of the file system to zero GB
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_11_n_update_size_to_zero_GB
+    MOVED to ATs volmgr
+    testset_story2067/test_10_n_update_size_to_zero_GB
+
+        Description:
+            Set the size of the file system to zero MB
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_12_n_update_greater_than_disk_size_all_nodes(self):
+    MOVED to ATs volmgr
+    testset_story2067/test_12_n_update_greater_than_disk_size_all_nodes
+
+        Description:
+            Increases the size of FS in more than space available
+
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_13_n_update_greater_than_disk_size_specific_node(self):
+    MOVED to ATs volmgr
+    testset_story2067/test_12_n_update_greater_than_disk_size_all_nodes
+
+        Description:
+            Increases the size of FS in more than space available
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_14_n_update_size_MB_validate_Logical_ext_size(self):
+     MOVED to ATs volmgr
+    testset_story43/test_17_n_calculation_file_system_not_multiple_of_4.at
+
+        Description:
+            Update the size of a file-system in MB so that the size is
+            not an exact multiple of the LVM Logical Extent size ('4MB')
+    git: 718847e8154aef17c8d4d8128a784977d69d5e36
+    gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_15_n_update_size_invalid_values
+    MOVED to ATs volmgr
+    testset_story2067/test_10_n_update_size_to_zero_GB
+
+        Description:
+            Try to update the size with invalid values.
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_16_n_attempt_resize_with_snapshot_present
+    MOVED to ATs volmgr
+    testset_story2067/test_16_n_attempt_resize_with_snapshot_present
+
+        Description:
+            Check that plan fails if an otherwise valid resize
+            is attempted with a snapshot in place.
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+test_17_n_attempt_snapshot_creation_with_pending_fs_resize
+    MOVED to ATs volmgr
+    testset_story2067/test_17_n_attempt_snapshot_creation_with_pending_fs_resize
+
+        Description:
+            Check to ensure that it is not possible to create a
+            snapshot while a filesystem size change is pending.
+    git:c0a67b04e2f26ff12eb71ab07a86a3565aefbe05
+    gerrit:https://gerrit.ericsson.se/#/c/1250746/
+
+
+Story 2115
+----------
+
+test_02_p_the_snapshot_name_and_size_are_correct
+        OBSOLETED merged with TC1
+        Description:
+            This test will verify that the snapshot name and size are correct
+            in correspondence with the snap_size attribute.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_03_n_user_attempts_to_create_more_than_one_snapshot
+        OBSOLETED merged with TC1
+        Description:
+            This test will verify that if the user attempts to create a
+            snapshot when another one already exists, An error message is
+            displayed providing time-stamp information about the existing
+            snapshot.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_06_p_disk_validation_uses_snap_size
+        OBSOLETED already tested in story43 TC 14-20
+        Description:
+            This test will verify that the disk size validation takes the
+            snap_size attribute into consideration.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_07_p_snapshot_location_in_model
+        OBSOLETED, merged with TC1
+        Description:
+            This test will verify that the snapshot item is created at the
+            toplevel location. I.e. /snapshots/
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_08_p_other_changes_ignored_if_snapshot_requested
+        OBSOLETED merged with TC1
+        Description:
+            This test will verify that tasks for model changes are not included
+            in the plan when a create_snapshot is run.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_09_p_tasks_model_changes_in_plan_create_snapshot
+        OBSOLETED merged with test_01
+        Description:
+            This test will verify that tasks for model changes are included in
+            the plan after a create_snapshot is run. They are used in
+            subsequent create plan.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_10_p_no_snapshot_exists_snapshot_taken_create_plan
+        Obsolete: LITPCDS-7683 removes taking snapshots during standard plan
+        Description:
+            This test will verify that if no snapshot pre exists, then snapshot
+            tasks are added at the beginning of the plan when the user runs
+            create_plan.
+
+        git: 6cd44f9a7b28cc53dea46c484fba3042511128ca
+        gerrit: https://gerrit.ericsson.se/#/c/492027/
+
+test_11_snapshot_exists_no_snapshot_tasks_added_plan
+        Obsolete: LITPCDS-7683 removes taking snapshots during standard plan
+        Description:
+            This test will verify that if a snapshot exists then no snapshot
+            tasks are added when the user runs create_plan.
+
+        git: 0fa1f4e0a36bbebf99c53ccc2027d627522c3321
+        gerrit: https://gerrit.ericsson.se/#/c/1261468/
+
+test_12_p_snapshot_grub_backed_up
+        OBSOLETED merged with test_01
+        Description:
+            This test will verify that when a snapshot is taken Grub is backed
+            up to the boot partition.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_13_p_snapshot_cmd_help
+        Moved to CLI
+        Description:
+            This test will verify that a user can view 'help' for the
+            'create_snapshot' command.
+
+        git: adc30faa4b823ffbfd8b409cfbfb4be8aee69d64
+        gerrit: https://gerrit.ericsson.se/#/c/773433/
+
+test_15_p_snap_size_attribute_zero_no_snap_task
+        OBSOLETED moved to AT:
+        VOLMGR/testset_story2115/
+        test_15_p_snap_size_attribute_zero_no_snap_task.at
+        Description:
+            This test will verify that if the snap_size attribute is set to
+            zero then no task is added for that particular volume.
+
+        git: 718847e8154aef17c8d4d8128a784977d69d5e36
+        gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_16_p_snap_size_defaults_100
+        OBSOLETED moved to AT:
+        VOLMGR/testset_story2115/
+        test_15_p_snap_size_attribute_zero_no_snap_task.at
+
+        Description:
+            This test will verify that if snap_size is not specified then the
+            snapshot volume size defaults to 100%.
+
+        git: 0fa1f4e0a36bbebf99c53ccc2027d627522c3321
+        gerrit: https://gerrit.ericsson.se/#/c/1261468/
+
+test_17_p_snap_size_parameter_validation
+        OBSOLETED, moved to ATs:
+        VOLMGR/testset_story2115/test_17_p_snap_size_parameter_validation.at
+        Description:
+            This test will verify that the only accepted values for the
+            snap_size parameter are 0->100
+
+        git: 718847e8154aef17c8d4d8128a784977d69d5e36
+        gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_18_n_error_create_snapshot_plan_already_running
+        OBSOLETED merged with story_2482_10877 TC 4
+        Description:
+            This test will verify that an error is returned if the user
+            attempts to run 'litp create_snapshot' while a plan is already
+            running.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_19_p_snapshots_are_not_taken_of_swap_volumes
+        OBSOLETED merged with test_01
+        Description:
+            This test will verify that snapshots are not taken of swap volumes.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_20_p_plan_successfull_stop_plan_create_snaphot_running
+        Description:
+            This test will verify that the plan completes successfully if
+            stop_plan is run while create_snaphot is running.
+
+        git: 26d7378b6d85a7ae69868fbaf8fe42400a303bf6
+        gerrit: https://gerrit.ericsson.se/#/c/763804/
+
+test_21_n_remove_plan_error_create_snapshot_running
+        OBSOLETED, merged with test_22
+        Description:
+            This test will verify remove_plan returns InvalidRequestError
+            message while create_snapshot is running.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_22_n_error_create_run_plan_snapshot_running
+        merged in to test_23
+        """
+        Description:
+            This test will verify that create/run/remove plan returns
+            InvalidRequestError message while create_snapshot is running.
+        Actions:
+             0. Delete the existing snapshot
+             1. Create a snapshot
+             2. Run create_plan
+             3. Verify that an InvalidRequestError is returned
+             4. Run run_plan
+             5. Verify that an InvalidRequestError is returned
+             6. Run remove_plan
+             7. Verify that an InvalidRequestError is returned
+        Result:
+            The create/run/remove _plan command returns InvalidRequestError
+            if run while create_snapshot is running.
+        """
+        gerrit: https://gerrit.ericsson.se/#/c/1293630/6
+
+test_23_n_snapshot_items_initial_state_after_plan_failed
+        Obsolete: LITPCDS-7683 removes taking snapshots during standard plan
+        Description:
+            This test will verify that the snapshot item is in an Applied state
+            if plan failed after snapshot tasks successful.
+
+        git: 4b54d4e70cab02ee412f8ab2e641f70170646b20
+        gerrit: https://gerrit.ericsson.se/#/c/1111921/
+
+test_23_p_run_successful_snapshot_plan
+        Obsolete, moved to core KGB story 11354
+        A create snapshot plan will not execute when the prompt is returned
+        to the user.
+
+        A plan will not execute when the prompt is returned to the user
+        once a remove snapshot plan is running
+
+        A deployment plan will not execute when the prompt is returned
+        to the user once a create snapshot plan is running
+
+        git: 3a5a18fa020d9825ef38351fb53dc8709a5fbf53
+        gerrit: https://gerrit.ericsson.se/#/c/1395126/
+
+Story 2478
+----------
+
+test_02_p_remove_snapshot_removes_grub_bkup
+        OBSOLETED, was merged with test_01
+        Description:
+            This test will verify that a task for removing the GRUB backup is
+            created and executed successfully when remove_snapshot is run.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_03_n_error_user_update_remove_snapshot_model_item
+        Description:
+            This test has been obsoleted due to the work of story
+            LITPCDS-9331. The remove command may now be issued aganst
+            /snapshots/item and the same behaviour as litp remove_snapshot
+            will be executed.
+
+            This test will verify that an error is generated if a user
+            attempts to update/remove the snapshot model item via LITP CLI
+            update/remove commands.
+
+        git: 01905e289865e8b263fa974832a8ae6c482d0320
+        gerrit: https://gerrit.ericsson.se/#/c/644905/
+
+test_04_n_error_update_remove_snapshot_model_item_XML
+        OBSOLETED moved to AT:
+        volmgr/testset_story2478/
+            test_04_n_error_user_update_remove_snapshot_model_item_XML.at
+        Description:
+            This test will verify that an error is generated when a user
+            attempts to update/remove the snapshot model item via XML.
+
+        git: 21e3cba3cd419d8a3f79609e5c012d62689ecc52
+        gerrit: https://gerrit.ericsson.se/#/c/1094558/
+
+test_05_n_fail_remove_snapshot_timestamp_empty_plan_fails
+        LITPCDS-10830, remove tasks shall now be idempotent, thus the
+        removal of a snapshot which does not exist shall not cause the
+        plan to fail
+
+        Description:
+            This test will verify that failure to remove a snapshot on a node
+            sets the timestamp of the snapshot model item to be empty and plan
+            fails.
+
+        git: f4394dc0d32d96e7a1ea518ec936bc218432fe56
+        gerrit: https://gerrit.ericsson.se/#/c/919852/
+
+test_06_p_failed_create_snapshot_plan_allows_create_plan
+    OBSOLETED, moved to ATs volmgr:
+    test_06_p_failed_create_snapshot_plan_allows_create_plan
+    @tms_id: litpcds_2478_tc06
+    @tms_requirements_id: LITPCDS-2478
+    @tms_title: failed create snasphot allows create_plan
+    @tms_description:
+        This test will verify that presence of a failed create_snapshot
+        plan does not block creation of a subsequent create_plan.
+    @tms_test_steps:
+        @step: Remove existing snapshots
+        @result: Snapshots are removed
+        @step: replace lvcreate with a dummy that returns an error
+        @result: original lvcreate is backed up
+        @result: dummy lvcreate is created
+        @step: Run create_snapshot
+        @result: Create_snapshot plan fails
+        @step: Create a plan
+        @result: Create plan succeeds
+        @result: There is a message at the end of the plan output stating
+            that the deployment snapshot is in a failed state
+        @result: Plan is in initial state
+        @step: Attempt to run the litp restore_snapshot command
+        @result: DoNothingPlanError is generated
+    @tms_test_precondition: NA
+    @tms_execution_type: Automated
+
+    git: d519d4db3c133d87c47a40213c55b4a38115315
+    gerrit: https://gerrit.ericsson.se/#/c/1364570/
+
+
+test_07_n_rerun_failed_remove_snap_only_tasks_for_fail
+        OBSOLETED due to story 10830, there are no mco calls in
+        remove_snapshot task creation any more to verify the existence of
+        snapshots, hence a remove_snapshot plan will always output the same
+        tasks
+
+        Description:
+            This test will verify that re-executing a failed remove_snapshot
+            plan only generates tasks for the tasks which were not successfully
+            run in the previous plan.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_08_n_remove_snapshot_no_snapshots_error_message
+        OBSOLETED moved to ATs:
+        volmgr: testset_story2478/
+            test_08_n_remove_snapshot_no_snapshots_error_message.at
+
+        Description:
+            This test will verify that executing remove_snapshot when there are
+            no snapshots generates an error message and no remove snapshot plan
+            is created.
+
+        git: 21e3cba3cd419d8a3f79609e5c012d62689ecc52
+        gerrit: https://gerrit.ericsson.se/#/c/1094558/
+
+
+test_10_n_error_if_remove_snapshot_plan_already_running
+        OBSOLETED merged with test_09
+        Description:
+            This test will verify that an error is returned if the user
+            attempts to run 'litp remove_snapshot' while a plan is already
+            running.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_12_p_model_change_tasks_not_included_remove_snapshot
+        OBSOLETED merged with test_01
+        Description:
+            This test will verify that tasks for model changes are not
+            included in the plan when a remove_snapshot is run.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_13_p_user_help_remove_snapshot
+        Moved to cli
+        Description:
+            This test will verify that a user can view 'help' for the
+            'remove_snapshot' command.
+
+        git: dc30faa4b823ffbfd8b409cfbfb4be8aee69d64
+        gerrit: https://gerrit.ericsson.se/#/c/773433/
+
+test_14_n_remove_plan_error_remove_snapshot_running
+        OBSOLETED merged with test_01
+        Description:
+            This test will verify that remove_plan returns InvalidRequestError
+            message while remove_snapshot is running.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_15_n_no_remove_snapshot_tasks_for_nodes_forremoval
+        OBSOLETED moved to ATs:
+        volmgr: testset_bug_litpcds-12785.at
+        Description:
+            This test will verify that remove_snapshot tasks are only created
+            for nodes which do not have a 'ForRemoval' state.
+
+        git: 21e3cba3cd419d8a3f79609e5c012d62689ecc52
+        gerrit: https://gerrit.ericsson.se/#/c/1094558/
+
+
+Story 2481
+----------
+test_02_n_error_snapshot_exists
+        MERGED IN test_01
+
+        Description:
+            This test will verify that if a snapshot exists, create_snapshot
+            gives an error.
+
+        git: b3b8db1cb9fe88727552fb8310596bed345dea83
+        gerrit: https://gerrit.ericsson.se/#/c/1003385/
+
+test_03_p_tasks_added
+        Obsolete: LITPCDS-7683 regular plans no longer contain snapshot tasks
+        Tested by tests in ERIClitpcore/ats/testset_story7683/
+        Description:
+            This test will verify if no snapshot exists, snapshot tasks are NOT
+            added to plan on next create_plan.
+
+        git: 6cd44f9a7b28cc53dea46c484fba3042511128ca
+        gerrit: https://gerrit.ericsson.se/#/c/492027/
+
+test_04_n_no_tasks_added
+        Obsolete: LITPCDS-7683 regular plans no longer contain snapshot tasks
+        Tested by tests in ERIClitpcore/ats/testset_story7683/
+        Description:
+            This test will verify if a snapshot exists, snapshot tasks are not
+            added to plan on next create_plan.
+
+        git: 6cd44f9a7b28cc53dea46c484fba3042511128ca
+        gerrit: https://gerrit.ericsson.se/#/c/492027/
+
+test_06_n_snap_size_zero
+    Obsolete move to AT
+     volmgr:/testset_story2481/test_06_n_snap_size_zero.at
+    Description:
+            This test verifies if a vxfs filesystem has a snap_size of zero
+            no snapshot task is created on create_snapshot.
+
+    git: c4cbac8b4ca6b20ea8463ef60818d37f4ca19f20
+    gerrit: https://gerrit.ericsson.se/#/c/1315349/
+
+
+test_08_n_disk_not_imported_create_snapshot
+        This test is obsolete. Litp will now import the disk group if it is
+        not already imported. See story LITPCDS-2777.
+        New behavior is now covered by test 2777.13
+
+        Description:
+            This test verifies that an error is returned if disk group is not
+            imported on any node
+
+        git: 038f9a47bb5a0a30f00a36c4b3d0b809bbffd8d0
+        gerrit: https://gerrit.ericsson.se/#/c/392916/
+
+test_09_p_remove_snapshot_vxvm
+        MERGED IN test_01
+
+        Description:
+            This test will verify once there are VxVM volumes in model
+            when the user runs remove_snapshot, tasks are added for
+            each volume and are successful
+            and remove the snapshot
+
+        git: b3b8db1cb9fe88727552fb8310596bed345dea83
+        gerrit: https://gerrit.ericsson.se/#/c/1003385/
+
+test obsolete_10_n_snapshot_not_exists
+        MERGED IN test_01
+
+        Description:
+            This test will verify if snapshot does not exist, remove_snapshot
+            gives an error
+
+        git: b3b8db1cb9fe88727552fb8310596bed345dea83
+        gerrit: https://gerrit.ericsson.se/#/c/1003385/
+
+test_12_p_disk_not_imported_remove_snapshot
+        This test is obsolete. Litp will now import the disk group if it is
+        not already imported. See story LITPCDS-2777.
+        New behavior is now covered by test 2777.13
+
+        Description:
+            This test verifies that an error is returned if disk group is not
+            imported on any node
+
+        git: 038f9a47bb5a0a30f00a36c4b3d0b809bbffd8d0
+        gerrit: https://gerrit.ericsson.se/#/c/392916/
+
+test_13_no_vxvm_tasks_created_snapshot_remove
+    Obsolete move to AT
+    volmgr:/testset_story2481/test_06_n_snap_size_zero.at
+    Description:
+        This test verifies that no vxvm tasks are being created
+        when no snapshots exist
+
+    git: c4cbac8b4ca6b20ea8463ef60818d37f4ca19f20
+    gerrit: https://gerrit.ericsson.se/#/c/1315349/
+
+Story 2482
+----------
+merged with story 10877
+    git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+    gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+Story 2482_10877
+----------------
+test_01_n_no_snapshot_item_error_when_restore_snapshot
+    OBSOLETED moved to AT:
+    volmgr: testset_story2482_10877/test_01_n_no_snapshot_item_error_when_restore_snapshot.at
+    Description:
+        This test will verify that if there is no snapshot item then the
+        user receives an error when they run restore_snapshot.
+
+    git: a7e9c399002a9d23c067e198a15c6ea2fb4f436b
+    gerrit: https://gerrit.ericsson.se/#/c/1262496/
+
+test_02_n_error_if_restore_snapshot_item_invalid
+        OBSOLETED, merged with TC 06 (story 2478)
+        Description:
+            This test will verify that an error is returned to the user if the
+            user attempts to restore a snapshot item which is invalid.
+            The invalid snapshot is created by disabling the command to take a
+            snapshot on one node.
+
+        git: ecab941a24ac1c2ae7ccce9e115ccfe9025fcc64
+        gerrit: https://gerrit.ericsson.se/#/c/1074018/
+
+test_03_n_restore_snapshot_volume_missing_warning
+     OBSOLETED contained in story 10830 TC3
+     Description:
+            This test will verify that if a  snapshot volume is missing the
+            "restore_snapshot" command completes successfully
+
+     git: a7e9c399002a9d23c067e198a15c6ea2fb4f436b
+     gerrit: https://gerrit.ericsson.se/#/c/1262496/
+
+test_04_n_restore_snapshot_plan_already_running_error
+     OBSOLETED moved to core KGB Story 2240 TC 1
+        Description:
+            This test will verify that an error is returned if the user
+            attempts to run 'litp
+            restore_snapshot/remove_snapshot/create_snapshot' while
+            a plan is already running.
+
+        git: 18b6cb2985eadcafff42ff2305d60f3b67a7976d 
+        gerrit: https://gerrit.ericsson.se/#/c/1368114/
+
+test_05_p_restore_snapshot_help
+        Description:
+            This test will verify that a user can view 'help' for the
+            'restore_snapshot' command.
+
+        This test has been moved to cli.testset_story2115.test_03
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+test_06_p_restore_snapshot
+    MERGED with test_03 story 2777
+    Description:
+        This test will verify that when a user runs restore_snapshot, the
+        litp snapshot volumes are restored, and nodes rebooted and that
+        none litp snapshots are not affected by the restore and that model
+        related tasks are not included in the restore plan.
+
+    git: d3214ceaf6a5f16576d43eb14385e59178bb9ea4
+    gerrit: https://gerrit.ericsson.se/#/c/1332659/
+
+test_07_p_restore_snapshot_grub_config_reverted
+        "THIS TEST COVERED IN TEST 6"
+        Description:
+            This test will verify that when a snapshot is restored the grub
+            config is reverted to backup.
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+test_08_p_restore_snapshot_snapshot_volumes_removed
+        "THIS TEST COVERED IN TEST 6"
+        Description:
+            This test will verify that after a successful restore_snapshot the
+            original snapshot volumes are removed.
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+test_09_p_only_litp_model_snapshots_restored
+        OBSOLETED was merged with test_06
+        Description:
+            This test will verify that only litp snapshots defined in the model
+            are restored.
+
+        git: 93d7e33913c2ebd3eb81b7216c5db89ece9d5790
+        gerrit: https://gerrit.ericsson.se/#/c/978681/
+
+test_10_n_node_marked_for_removal_snapshots_not_restored(self):
+        OBSOLETED moved to AT
+            ERIClitpvolmgr
+            testset_bug_litpcds-12785.at
+        Description:
+            This test will verify that if a node is marked for removal then
+            it's snapshots are restored.
+
+        git: b5a6dd893ea98e7aa9f5d38f637355d6614d28bd
+        gerrit: https://gerrit.ericsson.se/#/c/996329/
+
+test_11_p_snapshots_restored_MS_last_to_reboot
+        OBSOLETED was merged with test_6
+        Description:
+            This test will verify that when snapshots are restored then the MS
+            is the last node to reboot.
+
+        git: 93d7e33913c2ebd3eb81b7216c5db89ece9d5790
+        gerrit: https://gerrit.ericsson.se/#/c/978681/
+
+test_12_p_restore_snapshot_f_switch
+        obsoleted now thoroughly tested in LITPCDS-10830
+
+        LITPCDS-10877
+        Changes introduced by this story made use of "-f" deprecated.
+        The new default behaviour of "restore_snapshot" is equivalent to
+        what was previously achieved with "restore_snapshot -f" command.
+
+        Description:
+            This test will verify that a user can restore a valid snapshot
+            when one node has no snapshots using the -f switch.
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+test_13_p_restore_snap_size_zero_no_task
+         litpcds-9903, if the property
+         snap_size is updated, it is possible to restore snapshots
+
+        description:
+            this test will verify that if a volume has snap_size = 0, the user
+            doesn't get a warning.
+
+        git: 2002d2fb8661c2612ee36137ac00857ce875f77d
+        gerrit: https://gerrit.ericsson.se/#/c/914811/
+
+test_14_p_non_ext4_volumes_do_not_generate_a_warning
+         LITPCDS-9903, if the property
+         snap_size is updated, it is possible to restore snapshots
+
+        Description:
+            This test will verify that non_ext4 volumes do not generate a
+            warning.
+
+        git: 2002d2fb8661c2612ee36137ac00857ce875f77d
+        gerrit: https://gerrit.ericsson.se/#/c/914811/
+
+test_15_all_restore_snapshot_tasks_same_phase
+        Obsolete testcase
+        Due to changes to snapshot plan structure brought about by story
+            "LITPCDS-9407:As a LITP architect I want Core's snapshot task
+            sorting logic to be applied to the volmgr plugin so that I can
+            take advantage of the new ordering"
+        this above testcase is no longer relevant (and will fail KGB)
+        as it assumes snapshot plan has always one phase only.
+        The new snapshot plan building logic is now verified by manual tests:
+        - test_01_p_create_remove_named_snapshot_with_untagged_tasks
+        - test_02_p_create_remove_named_snapshot_with_tagged_tasks
+        The above tests are documented on
+            "LITP 2.1 Manual Test Cases (Regression)"
+        and available online at:
+            "http://confluence-nam.lmera.ericsson.se/pages/viewpage.action?
+            pageId=55760215"
+
+        Description:
+            This test will verify that all restore_snapshot tasks are in the
+            same phase.
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+
+test_16_p_restore_snapshot_plan_no_model_change_tasks
+        OBSOLETED was merged with test_06
+        Description:
+            This test will verify that the restore_snapshot plan does not
+            include tasks for model changes.
+
+        git: 93d7e33913c2ebd3eb81b7216c5db89ece9d5790
+        gerrit: https://gerrit.ericsson.se/#/c/978681/
+
+test_18_n_restore_snapshot_fails_lvconvert_returns_error
+        OBSOLETED included in test 17
+        Description:
+            This test will verify that the restore_snapshot plan fails and an
+            error is generated if the lvconvert command returns an error.
+            Also verify that after lvconvert is fixed restore_snapshot
+            executes successfully.
+
+        git: c26eb3cd6ebb5c4af9d88803d406256399e8a551
+        gerrit:https://gerrit.ericsson.se/#/c/982354/
+
+test_20_p_restore_snapshot_completes_stop_plan
+        OBSOLETED was merged with test_06
+        Description:
+            This test will verify that the restore_snapshot plan completes
+            successfully if stop_plan is run while restore_snaphot is running.
+
+        git: 93d7e33913c2ebd3eb81b7216c5db89ece9d5790
+        gerrit: https://gerrit.ericsson.se/#/c/978681/
+
+test_21_n_remove_plan_error_restore_snapshot_running
+        OBSOLETED waas merged with test_06
+        Description:
+            This test will verify that remove_plan returns InvalidRequestError
+            message while restore_snapshot is running.
+
+        git: 93d7e33913c2ebd3eb81b7216c5db89ece9d5790
+        gerrit: https://gerrit.ericsson.se/#/c/978681/
+
+test_22_n_failed_restore_snapshot_plan_blocks_create_plan
+        This test is no longer valid. See bug LITPCDS-6525
+
+        Description:
+            This test will verify that presence of a failed restore_snapshot
+            plan blocks creation of a subsequent create_plan
+
+        git: 9fb0179ded567f9452dd13efb5314e6069ff1c7a
+        gerrit: https://gerrit.ericsson.se/#/c/870013/
+
+test_27_p_item_state_altered_by_snapshot_operations
+    MOVED to ATs volmgr/ats/testset_bug13195
+    Description:
+        Verify bug LITPCDS-13195
+        Verify that performing snapshot tasks does not alter item's state
+        and subsequent litp commands functionality is not affected
+    git: ad3d6500e959636df4ff4c82712cc89a8949c36f
+    gerrit: https://gerrit.ericsson.se/#/c/1382174/
+
+
+Story 2545
+----------
+        OBSOLETED moved to AT volmgr:
+        testset_story2545
+        test_same_disk_properties_validation_vxvm.at
+        Description:
+            Verify the user can create a storage profile
+
+        git: 1409321d3c3cda69d0b2518ba997c1bbf7f16663
+        gerrit: https://gerrit.ericsson.se/#/c/1095828/
+
+Story 2777
+----------
+test_01_p_restore_snapshot(self):
+        OBSOLETED was merged with TC 3
+        Description:
+            This test will verify that when a user runs restore_snapshot the
+            litp snapshot volumes are restored and nodes rebooted.
+
+        git: ae3edb8d1ccc6a72b6703533517a2dbbdff828fd
+        gerrit: https://gerrit.ericsson.se/#/c/957627/
+
+test_02_p_after_restore_snapshot_volumes_removed(self):
+        OBSOLETED was merged with TC 3
+        Description:
+            This test will verify that after a successful restore_snapshot the
+            snapshot volumes are removed.
+
+        git: ae3edb8d1ccc6a72b6703533517a2dbbdff828fd
+        gerrit: https://gerrit.ericsson.se/#/c/957627/
+
+test_04_p_restore_snapshot_no_tasks_for_model_changes
+        OBSOLETED merged with tc 3
+        Description:
+            This test will verify that the restore_snapshot plan does not
+            include tasks for model changes.
+
+        git: ae3edb8d1ccc6a72b6703533517a2dbbdff828fd
+        gerrit: https://gerrit.ericsson.se/#/c/957627/
+
+test_05_p_snapshot_volume_corrupt_plan_fails(self):
+        Obsoleted as this functionality is tested in
+        story6425.test_07_n_restore_snap_error_on_cli_when_snap_invalid
+
+        Description:
+            This test will verify that if a snapshot volume becomes corrupt
+            then the plan will fail with an error in the message log.
+
+        git: dcda22c29cf7df9d208edf23c74698e70b274bfd
+        gerrit: https://gerrit.ericsson.se/#/c/890085/
+
+test_06_p_restore_fails_vxsnap_returns_error
+        obsoleted due to LITPCDS-10831 - mco agents have been removed from
+        create_plan section, thus it will be a task in the restore snapshot
+        plan which fails, this would leave the cluster in a corrupted state.
+
+        Description:
+            This test will verify that the restore_snapshot plan fails and an
+            error is generated if the vxsnap command returns an error.
+
+        git: 841089e969fc300370fcef84023ca8dee9a2b232
+        gerrit: https://gerrit.ericsson.se/#/c/981892/
+
+test_08_p_rerun_failed_restore_only_tasks_for_successfull
+        OBSOLETE, restore_snapshot always creates the same plan (due to
+        LITPCDS-10831), failing tasks are checked in LITP-CDS-10831
+        Description:
+            This test will verify that re-executing a failed restore_snapshot
+            plan only generates tasks for the tasks which were not successfully
+            run in the previous plan.
+
+        git: 66e40e37a5a878b0c2b2e92a93ed79f1d49b657e
+        gerrit: https://gerrit.ericsson.se/#/c/1327707/
+
+test_09_p_plan_fails_node_uncontactable_Interface_down
+        OBSOLETED due to LITPCDS-12031:
+        restore_snapshot fails and the user is in disaster recovery mode and
+        needs to use prepare_restore
+
+        Description:
+            This test will verify that the plan fails and an error is generated
+            if a node becomes uncontactable. Interface down.
+
+        git: 8ffe6553879b6db2a4dd7ad4251a0a631a22ae3a
+        gerrit: https://gerrit.ericsson.se/#/c/959328/
+
+test_11_p_no_vxvm_tasks_created_snap_size_zero
+        OBSOLETED, moved to ATs VOLMGR:
+        testset_story2777/test_11_p_no_vxvm_tasks_created_snap_size_zero.at
+        Description:
+            This test will verify that no vxvm tasks are created if the vxvm
+            volumes have no snapshots (snap_size=0).
+
+test_12_p_snapshot_remains_valid_if_restore_fails
+        obsoleted due to LITPCDS-10831
+        No mco agents at creation of restore_snapshot
+        Also once vxsnap command works on at least one of the nodes
+        then the snapshot will be successfully restored.
+        Should vxsnap be broken on all nodes then the task in the plan to
+        restore the snapshot fails, but LVM snapshots have already been
+        successfully restore at this point - this would leave the cluster
+        in a corrupted state.
+        Description:
+            This test will verify that a snapshot remains valid if a plan to
+            restore the snapshot fails.
+
+        git: 9336136edbbb74c7f337e277646669b25c3cbe58
+        gerrit: https://gerrit.ericsson.se/#/c/984905/
+
+test_13_p_disk_group_deported_restore_successfull
+    OBSOLETE, contained in testset_story10831 TC 05
+    Description:
+        This test will verify that if a disk group is deported, then
+        it will be imported and restore will be successfull.
+
+    git: 02242434923c97ddcdb3dae30e103653c73a4a97
+    gerrit: https://gerrit.ericsson.se/#/c/1366232/
+
+Story 3153
+----------
+
+test_01_p_lvm_puppet_control
+        This test has been made obsolete because it is a duplicate of
+        testset_story43.test_01_p_lvm_puppet_control
+
+        Description:
+            This test ensures LVM components are under puppet control. When
+            first Puppet cycle is completed file system layout is preserved.
+
+        git: 8b1ceac555dc75994df814aa381eb16d3c62e767
+        gerrit: https://gerrit.ericsson.se/#/c/367571/
+
+test_03_n_volume_size
+        OBSOLETED moved to ATs
+        volmgr/testset_story43/test_14
+        Description:
+            This test checks that a nodes file system cannot allocate more
+            space than is available on the volume group
+
+        git: 718847e8154aef17c8d4d8128a784977d69d5e36
+        gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_04_n_mount_point_duplication
+        OBSOLETED moved to ATs
+        volmgr/testset_story43/test_10
+        Description:
+            This test ensures all file system mount points are unique on
+            root volume group
+
+        git: 718847e8154aef17c8d4d8128a784977d69d5e36
+        gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_05_p_allocate_all_volume_size
+        OBSOLETED moved to ATs
+        volmgr/testset_story43/test_14
+        Description:
+            This test checks that a nodes file system can allocate exactly the
+            same space what is available on the volume group
+
+        git: 718847e8154aef17c8d4d8128a784977d69d5e36
+        gerrit: https://gerrit.ericsson.se/#/c/1114999/
+
+test_06_n_allocate_more_volume_size
+        This test has been made obsolete because it is a subset of test 03
+
+        Description:
+            This test checks that a nodes file system can not allocate more
+            space than is available on the volume group
+
+        git: 8c1c882186abe15f6e47f4b112197491eab75540
+
+Story 4122
+----------
+
+test_01_p_volume_driver_default
+        CREATED AS AT:
+        ERIClitpvolmgr/ats/testset_story4122/test_01_p_volume_driver_default.at
+
+        Description:
+            This test checks that the volume_driver property is set
+            to 'lvm' by default
+
+        git: 14ae9af3c5fb22d818e9a15fc89ade07f51ecc06
+        gerrit: https://gerrit.ericsson.se/#/c/993647/
+
+test_02_p_validate_volume_driver_value
+        This test will no longer be possible as LITPCDS-7500 makes volume_driver
+        have updatable_rest=False.
+        Description:
+            This test verifies a storage_profile's volume_driver property.
+
+        git: 3c127156891d707e3935258eff1c54ca76e458a2
+        gerrit: https://gerrit.ericsson.se/#/c/539979/
+
+test_03_n_storage_profile_not_linked
+        CREATED AS AT: ERIClitpvolmgr
+        /ats/testset_story4122/test_03_n_storage_profile_not_linked.at
+
+        Description:
+            This test checks that the volume_driver property cannot be set to a
+            spurious value and that a node with no storage profile will trigger
+            a validation error at item creation.
+
+        git: 14ae9af3c5fb22d818e9a15fc89ade07f51ecc06
+        gerrit: https://gerrit.ericsson.se/#/c/993647/
+
+test_04_p_storate_profile_not_linked_lvm_vxvm
+        CREATED AS AT: ERIClitpvolmgr
+        /ats/testset_story4122/test_04_p_storage_profile_not_linked_lvm_vxvm.at
+
+        Description:
+            This test checks that when volume_driver is set to 'lvm' or 'vxvm'
+            without being linked to a node, plan creation will be successful.
+
+        git: 14ae9af3c5fb22d818e9a15fc89ade07f51ecc06
+        gerrit: https://gerrit.ericsson.se/#/c/993647/
+
+Story 4331
+----------
+test_03_p_vxvm_multi_phys_dev_in_vg_expansion_fs_increase
+        Description:
+            To ensure that it is possible to, specify the creation of
+            additional physical-device child objects below a volume group which
+            resides below a storage-profile which has volume driver of type
+            vxvm, which has already been deployed to a cluster, while
+            simultaneously specifying an increase in file-system size.
+        git: cef191e9df23bc4b4c748abdfd98725d6b07ed6b
+        gerrit: https://gerrit.ericsson.se/#/c/1383513/  
+
+Story 6379
+----------
+
+test_01_p_user_runs_create_snapshot_with_name_tag_argument
+    MERGED with test_01 story7193
+         Description:
+            This test will verify that when a user runs create_snapshot with a
+            name-tag argument,
+            - Snapshots for all the LVM & VxVM volumes in the model are created
+            - Named Backup Snapshot item is created in the model,
+            - The Named Backup Snapshot item is 'Applied',
+            - There is no Grub backup. (snap_size is different then 0)
+            Repeat for when a Deployment Snapshot exists.
+    git: 561e5d2586bc0b71f6a90186c93aaf895f698790
+    gerrit: https://gerrit.ericsson.se/#/c/1299157/
+
+test_02_n_cannot_create_dep_ss_when_named_ss
+    OBSOLETED, moved to AT:
+        volmgr/testset_story6379/test_02_n_cannot_create_dep_ss_when_named_ss
+
+    Description:
+        This test will verify that the user cannot create an Deployment
+        snapshot when a Named Backup Snapshot exists. Verify that the user
+        gets an appropriate error message.
+
+    git: 21e3cba3cd419d8a3f79609e5c012d62689ecc52
+    Gerrit: https://gerrit.ericsson.se/#/c/1094558/
+
+test_05_n_tasks_fails_named_snapshot_item_no_timestamp
+    MERGED with test_04
+    Description:
+        This test will verify that if a tasks fails to snapshot a volume
+        the Named Backup Snapshot item has no time-stamp. Verify that item
+        is in 'Initial' state.
+
+    git: 451674ab199d570724e8e995a80373f85d17e830
+    gerrit: https://gerrit.ericsson.se/#/c/1261839/
+
+Story 7193
+----------
+
+test_05_n_snapshot_item_xml
+    MERGED with test_01
+    Description:
+        Test that when we do an export as xml the snapshot item
+        is not being exported
+
+    git: 561e5d2586bc0b71f6a90186c93aaf895f698790
+    gerrit: https://gerrit.ericsson.se/#/c/1299157/
+
+test_06_p_remove_snapshot_flags
+    MERGED with test_01
+    Description:
+        this test will verify that when a user runs remove_snapshot -n
+        or --name snapshots with the specified name are removed.
+
+    git:
+    gerrit:
+
+Story 8716
+----------
+test_05_p_lvm_snap_external_false_plan_tasks
+     MOVED to ATs:volmgr/testset_story8716/
+        test_10_p_vxvm_snap_external_true_plan_tasks.at
+        test_11_p_vxvm_snap_external_true_plan_tasks_named_snapshots.at
+    (Remove_snapshot part contained in story 10830 tc3)
+    Description:
+            To ensure that tasks to snapshot a file system are generated during
+            create_snapshot phase when the property 'snap_external' is set to
+            false on a 'file-system' object which exists below a
+            'storage-profile' object of driver type 'lvm' when no snapshot
+            object currently exists in the model; It also ensures that no
+            tasks are generated for 'file-system' objects of type 'swap'
+            despite 'snap_external' being set to false.
+    git: e8f20b5507f346bb86e462962ca2ea9451b3dfc1
+    gerrit: https://gerrit.ericsson.se/#/c/1320292/
+
+
+test_06_p_vxvm_snap_external_false_plan_tasks
+    MOVED to ATs:volmgr/testset_story8716/
+        test_10_p_vxvm_snap_external_true_plan_tasks.at
+        test_11_p_vxvm_snap_external_true_plan_tasks_named_snapshots.at
+    Description:
+            To ensure that tasks to snapshot a file system are generated during
+            create_snapshot phase when the property 'snap_external' is set to
+            false on a 'file-system' object which exists below a
+            'storage-profile' object of driver type 'vxvm'  when no snapshot
+            object currently exists in the model;
+            It also ensures that no tasks are generated for 'file-system'
+            objects of type 'swap' despite 'snap_external' being set to false.
+    git: e8f20b5507f346bb86e462962ca2ea9451b3dfc1
+    gerrit: https://gerrit.ericsson.se/#/c/1320292/
+
+test_09_p_lvm_snap_external_true_plan_tasks
+    MOVED to ATs:volmgr/testset_story8716/
+        test_09_p_lvm_snap_external_true_plan_tasks.at
+        test_08_p_lvm_snap_external_true_plan_tasks_named_snapshots.at
+    Description:
+        To ensure that tasks to snapshot a file system are not generated
+        during create_snapshot phase when the property 'snap_external'
+        is set to true on a 'file-system' object which exists below a
+        'storage-profile' object of driver type 'lvm'.
+
+    git: e8f20b5507f346bb86e462962ca2ea9451b3dfc1
+    gerrit: https://gerrit.ericsson.se/#/c/1320292/
+
+test_10_p_vxvm_snap_external_true_plan_tasks
+    MOVED to ATs:volmgr/testset_story8716/
+        test_10_p_vxvm_snap_external_true_plan_tasks.at
+        test_11_p_vxvm_snap_external_true_plan_tasks_named_snapshots.at
+    Description:
+            To ensure that tasks to snapshot a file system are not generated
+            during create_snapshot phase when the property 'snap_external' is
+            set to true on a 'file-system' object which exists below a
+            'storage-profile' object of driver type 'vxvm' and during
+            create_plan phase when no snapshot object currently exists in
+            the model.
+
+    git: 6cb0614e341e9330e908b032fc26e18c72db8172
+    gerrit: https://gerrit.ericsson.se/#/c/1315931/
+
+Story 9061
+----------
+
+MOVED to ATs
+Volmgr:/testset_story9061
+
+git: ce7712359da3800d4db9c253f2b3bdd1da85e26b
+gerrit: https://gerrit.ericsson.se/#/c/1266818/
+
+Story 9114
+----------
+
+test_02_p_increase_fs_size_snap_infra
+        Moved to ATs 9114/test_02_p_increase_fs_size_snapshot
+        Description:
+            To ensure that it is possible to specify an increase in
+            file-system size from X to Y, and that the new size is
+            configured correctly on the cluster, when snapshots of the
+            cluster exist.
+        git: af274e0feea91bd8ae61d43d7a7e31fea80ccc73
+        gerrit: https://gerrit.ericsson.se/#/c/1359403
+
+test_04_p_increase_fs_size_snap_clustr
+        Moved to ATs 9114/test_02_p_increase_fs_size_snapshot
+        Description:
+             To ensure that it is possible to specify an increase in
+             file-system size from X to Y, and that the new size is configured
+             correctly on the cluster, when snapshots of the cluster exist.
+        git: af274e0feea91bd8ae61d43d7a7e31fea80ccc73
+        gerrit: https://gerrit.ericsson.se/#/c/1359403
+
+Story 9331
+----------
+test_04_p_create_remove_snapshot_using_rest_interface
+    OBSOLETE, moved to ATs core:
+    testset_story9331/test_04_p_create_remove_snapshot_using_rest_interface
+    Description:
+        Verify that a user can create/remove deployment and named
+        snapshots using REST interface.
+
+    git: de0576e8899098ccf200d895cedc8d6bb9f044ef
+    gerrit: https://gerrit.ericsson.se/#/c/1375697/
+
+test_05_p_restore_snapshot_using_rest_interface
+    OBSOLETE, moved to ATs core:
+    testset_story9331/test_05_p_restore_snapshot_using_rest_interface
+
+    Description:
+        Verify that a user can restore deployment snapshot
+        using REST interface.
+
+    git: de0576e8899098ccf200d895cedc8d6bb9f044ef
+    gerrit: https://gerrit.ericsson.se/#/c/1375697/
+
+Story 9564
+----------
+MOVED to ATs
+Volmgr:/testset_story9564
+
+git: 170cc58cdd0c68a986f5b259133a7dbe37456619
+gerrit: https://gerrit.ericsson.se/#/c/1297137/
+
+Story 10830
+-----------
+test_06_p_restore_snapshot_snap_missing_force_success
+        OBSOLETED, merged with test_06
+        Description:
+            To ensure that should a snapshot created by LITP be
+            manually removed, that on issuing the restore_snapshot
+            command along with the force option that the plan is
+            successful.
+
+        git: 24cbbedc52fa51356e733a74e796a4f17d549f76
+        gerrit: https://gerrit.ericsson.se/#/c/1538539/
+
+test_08_p_restore_snap_success_when_node_unreac_force_success
+        OBSOLETED, merged with test 07
+        Description:
+            Verifies that if a node is down restore_snapshot -f succeeds.
+        git: 24cbbedc52fa51356e733a74e796a4f17d549f76
+        gerrit: https://gerrit.ericsson.se/#/c/1538539/
+
+test_10_n_rem_snap_fail_node_shutd_post_chk_node_presence
+        OBSOLETED, moved to ATs (due to its unlikeliness and duration):
+        volmgr/ats/testset_story10830/
+        test_10_n_rem_snap_fail_node_shutd_post_chk_node_presence.at
+        Description:
+            To ensure that in the edge case where when the remove_snapshot
+            command has been issue that following the check for presence
+            of all nodes task completing a node is shutdown that the
+            plan fails with an error message in the log indicating
+            the node on which the remove command could not be executed.
+        git: 733575192cef0d864c304d2374e1a2c1fd3a2c95
+        gerrit: https://gerrit.ericsson.se/#/c/1529502/
+
+test_11_n_restore_snap_fail_when_node_shutdown_post_chk_node_presence
+
+        OBSOLETED, moved to ATs (due to its unlikeliness and duration)
+        volmgr/ats/testset_story10830/
+   test_11_n_restore_snap_fail_when_node_shutdown_post_chk_node_presence.at
+        Description:
+            To ensure that should a node, on which resides snapshots
+            created by LITP, be powered off, that on issuing the
+            restore_snapshot command along with the force argument
+            that the plan is successful.
+        git: 733575192cef0d864c304d2374e1a2c1fd3a2c95
+        gerrit: https://gerrit.ericsson.se/#/c/1529502/
+
+
+Story 10831
+-----------
+test_07_p_restore_snap_restores_all_present_snaps
+        OBSOLETED, already tested in test_06 (story 2482_10877)
+        Description:
+           To ensure that legacy snapshot behaviour is retained,
+           and that a series of extra tasks are now included in
+           the plan to check the validity and presence of all of the snapshots.
+
+        git: fadf367c54473938f18a6327af07c0147539c217
+        gerrit: https://gerrit.ericsson.se/#/c/1116985/
+
+test_09_p_restore_snapshot_snap_missing_force_success
+        MERGED in test_08
+        Description:
+            To ensure that should a snapshot created by LITP be manually
+            removed, that on issuing the restore_snapshot command
+            along with the force option that the plan is successful.
+
+        git: 66c8b166041ada40e1a8852c1b8607b950be0162
+        gerrit: https://gerrit.ericsson.se/#/c/1424470/
+
+Story 11354
+-----------
+test_01_n_restore_snapshot_not_allowed_if_plan_failed
+        OBSOLETED, moved to ATs volmgr:
+        testset_story11354/test_01_n_restore_snapshot_not_allowed_if_plan_failed
+        Description:
+            Verify that "create_snapshot -n" fails if last
+            deployment plan failed
+        git: efa6d0dfdb4d8d22efa58f4f4f564feec18c6494
+        gerrit: https://gerrit.ericsson.se/#/c/1299552/
+
+
+Story 11872
+-----------
+
+test_02_p_valid_dependency_graph
+        Obsoleted moved to ATs volmgr/testset_story11872/test_02
+        Description:
+            Verify that when a user run "restore_snapshot" and a valid
+            dependency graph was derived from the clusters' "dependency_list"
+            property at time of snapshot creation, then nodes restart tasks
+            are sequenced according to the sequence defined by the dependency
+            graph
+
+        git: 4f7dddbe1be51f19da4bd7cda0336f47e8e74594
+        gerrit: https://gerrit.ericsson.se/#/c/1481289/
+
+
+test_03_n_invalid_dependency_graph
+        Obsolete moved to ATs volmgr/testset_story11872/test_03
+        Description:
+            Verify that when a user run "restore_snapshot" and a
+            dependency graph containing circular reference is derived from
+            the clusters' "dependency_list" property, then nodes
+            restart tasks are not re-ordered
+
+        git: 5ba942e2e13fa88a4d5b8bf84106f5a53a06633a
+        gerrit: https://gerrit.ericsson.se/#/c/1484692/
+
+test_04_p_dependency_list_set_to_empty_string
+        Obsoleted moved to ATs volmgr/testset_story11872/test_04
+        Description:
+            Verify that when a user run "restore_snapshot" and property
+            "dependency_list" on at least one cluster is set to empty string,
+            then nodes restart tasks are sequenced according to the
+            sequence defined by the dependency graph and the empty string
+            dependency list is ignored
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_05_p_dependency_list_points_to_non_existent_cluster
+        Removed, duplicate of test_09
+        Description:
+            Verify that when a user run "restore_snapshot" and the
+            cluster to which at least one dependency list is set to point to
+            is removed at restore snapshot time, then nodes restart tasks
+            are sequenced according to sequence defined by the dependency graph
+            calculated ignoring the missing cluster.
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_06_p_forremoval_cluster_at_restore_snapshot_time
+        Obsoleted moved to ATs volmgr/testset_story11872/test_06
+        Description:
+            Verify that when a user run "restore_snapshot" and the
+            cluster to which at least one dependency list is set to point to
+            is marked ForRemoval at restore snapshot time, then nodes restart
+            tasks are sequenced according to sequence defined by the
+            dependency graph.
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_07_p_forremoval_cluster_at_snapshot_creation_time
+        Obsoleted moved to ATs volmgr/testset_story11872/test_07
+        Description:
+            Verify that when a user run "restore_snapshot" and the
+            cluster to which at least one dependency list is set to point to
+            is marked ForRemoval at create snapshot time, then nodes restart
+            tasks are sequenced according to sequence defined by the
+            dependency graph.
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_08_p_removal_of_cluster_before_restore_snapshot
+        Obsoleted moved to ATs volmgr/testset_story11872/test_08
+        Description:
+            Verify that when a user run "restore_snapshot" and the cluster
+            to which at least one dependency list was set to point to is
+            removed by at restore snapshot time, then nodes restart according
+            to the sequence defined by the dependency graph at create
+            snapshot time.
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_09_p_mark_forremoval_of_cluster_before_restore_snapshot
+        Obsoleted moved to ATs volmgr/testset_story11872/test_09
+        Description:
+            Verify that when a user run "restore_snapshot" and a cluster
+            with property dependency_list is removed, then nodes
+            restart according to the sequence defined by the dependency
+            graph at create snapshot time
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_13_p_cluster_item_in_applied_at_create_snapshot_time
+        Obsolete moved to ATs volmgr/testset_story11872/test_13
+        Description:
+            Verify dependency graph can be determined at snapshot creation
+            time if clusters are in Applied state
+
+        git: 5ba942e2e13fa88a4d5b8bf84106f5a53a06633a
+        gerrit: https://gerrit.ericsson.se/#/c/1484692/
+
+test_14_n_cluster_depending_on_non_existing_cluster
+        Obsolete moved to ATs volmgr/testset_story11872/test_14
+        Description:
+            Verify that when a user run "restore_snapshot" and a cluster
+            whose dependency_list depends on an non existing cluster,
+            then nodes restart are not reordered.
+
+        git: 5ba942e2e13fa88a4d5b8bf84106f5a53a06633a
+        gerrit: https://gerrit.ericsson.se/#/c/1484692/
+
+test_15_p_two_clusters_depend_on_the_same_cluster
+        Obsoleted moved to ATs volmgr/testset_story11872/test_15
+        Description:
+            Verify that id two cluster are set to depend on the same cluster
+            at snapshot creation time, when a user run "restore_snapshot" the
+            nodes restart according with the derived dependency graph
+
+        git: 1c7e55930acc4b2fd0f969297630ed309c32c909
+        gerrit: https://gerrit.ericsson.se/#/c/1478945/
+
+test_16_n_a_cluster_that_depends_on_itself
+        Obsolete moved to ATs volmgr/testset_story11872/test_16
+        Description:
+            Verify that if a cluster is set to depend on itself at snapshot
+            creation time, when a user run "restore_snapshot" the nodes
+            restart tasks are not re-ordered
+
+        git: 5ba942e2e13fa88a4d5b8bf84106f5a53a06633a
+        gerrit: https://gerrit.ericsson.se/#/c/1484692/
+
+test_17_n_one_cluster_depends_on_another_cluster_twice
+        Obsolete moved to ATs volmgr/testset_story11872/test_17
+        Description:
+            Verify that if one cluster has dependency_list property set to
+            depend on another cluster twice at snapshot creation time,
+            when a user run "restore_snapshot" the nodes restart tasks are not
+            re-ordered
+
+        git: 5ba942e2e13fa88a4d5b8bf84106f5a53a06633a
+        gerrit: https://gerrit.ericsson.se/#/c/1484692/
